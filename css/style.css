@@ -10,7 +10,7 @@ textarea,
 .form-field {
 	font-family: 'Roboto', sans-serif;
 }
-test
+
 .grid-container {
   height: 100%;
   display: grid;
@@ -385,12 +385,9 @@ nav {
 	justify-content: center;
  }
 
-/*Memebers*/
-.messaging-settings {
-	grid-column: 1;
-}
+/*Memebers and recent*/
 
-.members-container,
+.member-container,
 .recent-container {
 	display: flex;
 	flex-direction: row;
@@ -401,18 +398,23 @@ nav {
 	height: 6rem;
 }
 
-.members-date {
+/*.members-date {
 	align-content: center;
 	width: 50px;
-}
+}*/
 
-.members-text,
-.recent-text {
+.member-text,
+.recent-text,
+.member-text p {
 	display: flex;
 	flex-direction: row;
 	flex-basis: 80%;
-	text-align: start;
 	padding-bottom: 30px;
+	padding-left: 10px;
+}
+
+.messaging-settings {
+	grid-column: 1;
 }
 
 /*Buttons*/
