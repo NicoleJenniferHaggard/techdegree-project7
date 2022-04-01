@@ -214,7 +214,8 @@ main {
 	margin-top: 10px;
 }
 
-.member-container {
+.member-container,
+.recent-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -224,14 +225,14 @@ main {
 	padding-bottom: 20px;
 }
 
-.members-text {
+.members-text,
+.recent-text {
 	padding-top: 5px;
 }
 
 a:link {
   text-decoration: none;
 }
-
 
 .widget-container {
   display: flex;
@@ -326,7 +327,7 @@ a:link {
 header {
 	display: flex;
   padding: 10px;
-	}
+}
 
 .bell {
 	display: flex;
@@ -336,7 +337,7 @@ header {
 }
 
 .profile {
-		padding-right: 5px;
+	padding-right: 5px;
 }
 
 .profile-image {
@@ -349,14 +350,82 @@ header {
 	padding-right: 40px;
 }
 
+.daily {
+	grid-column: 1 / 2;
+}
+
+.mobile {
+	grid-column: 2 / 3;
+}
+
+.widget-container-full {
+	width: 90vw;
+}
+
+.widget-container-half {
+	width: 45vw;
+}
+
 /* Navigation*/
 nav {
 	grid-area: navigation;
 }
 
 .nav-icons {
-display: flex;
-flex-direction: column;
-height: auto;
-justify-content: flex-start;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	justify-content: flex-start;
+}
+
+/*Social*/
+.socials {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+ }
+
+/*Memebers*/
+.messaging-settings {
+	grid-column: 1;
+}
+
+.members-container,
+.recent-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.profile-image {
+	width: 6rem;
+	height: 6rem;
+}
+
+.members-date {
+	align-content: center;
+	width: 50px;
+}
+
+.members-text,
+.recent-text {
+	display: flex;
+	flex-direction: row;
+	flex-basis: 80%;
+	text-align: start;
+	padding-bottom: 30px;
+}
+
+/*Buttons*/
+.form-field,
+.form-area  {
+	width: 700px;
+}
+
+.button-primary {
+	width: 700px;
+}
+
+#save,
+#cancel {
+	width: 340px;
 }
