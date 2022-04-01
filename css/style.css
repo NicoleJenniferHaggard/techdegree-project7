@@ -367,11 +367,15 @@ header {
 }
 
 /* Navigation*/
-nav {
-	grid-area: navigation;
+.nav-icons {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	justify-content: flex-start;
+
 }
 
-.nav-icons {
+/*.nav-icons {
 	display: flex;
 	flex-direction: column;
 	height: auto;
@@ -397,11 +401,6 @@ nav {
 	width: 6rem;
 	height: 6rem;
 }
-
-/*.members-date {
-	align-content: center;
-	width: 50px;
-}*/
 
 .member-text,
 .recent-text,
@@ -430,4 +429,33 @@ nav {
 #save,
 #cancel {
 	width: 340px;
+}
+
+@media screen and (min-width: 1024px) {
+
+.grid-container {
+	grid-template-columns: 80px 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+	"header header"
+	"navigation-main";
+}
+
+.members-section {
+	grid-column: 1;
+}
+
+.activity {
+	grid-column: 2;
+}
+
+.form-field,
+.form-area,
+.button-primary {
+	width: 900px;
+}
+
+#save,
+#cancel {
+	width: 445px;
 }
