@@ -143,12 +143,12 @@ main {
 	border-radius: 5px;
 }
 
-.close {
-  font-size: 28px;
+.alert-banner-close {
+  font-size: 18px;
   font-weight: bold;
   position: absolute;
-  top: 60%;
-  right: 10%;
+  top: 38.5%;
+  right: 8%;
 }
 
 .traffic-header {
@@ -371,6 +371,14 @@ header {
 
 .widget-container-half {
 	width: 45vw;
+}
+
+.alert-banner-close {
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 32%;
+  right: 2%;
 }
 
 /* Navigation*/
