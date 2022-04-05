@@ -402,30 +402,25 @@ header {
  }
 
 /*Memebers and recent*/
-
 .member-container,
 .recent-container {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
+.members,
 .profile-image {
 	width: 6rem;
 	height: 6rem;
 }
 
-.member-text,
-.recent-text,
-.member-text p {
-	display: flex;
-	flex-direction: row;
-	flex-basis: 80%;
-	padding-bottom: 30px;
-	padding-left: 10px;
-}
-
 .messaging-settings {
 	grid-column: 1;
+}
+
+.recent-container {
+	margin-left: 30px;
 }
 
 /*Buttons*/
@@ -451,6 +446,14 @@ header {
 	grid-template-areas:
 	"header header"
 	"navigation-main";
+}
+
+.daily {
+	grid-column: 1 / 2;
+}
+
+.mobile {
+	grid-column: 2 / 3;
 }
 
 .members-section {
