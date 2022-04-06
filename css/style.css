@@ -312,19 +312,29 @@ a:link {
 	margin-bottom: 20px;
 }
 
-.switch-ios.switch-light>span {
-	display: inline-block;
-	vertical-align: middle;
+.switch-light.switch-ios {
+	display: flex;
+	width: 100%;
+	min-width: 100%;
+	align-items: center;
+}
+
+.switch-ios.switch-light span {
+	flex-basis: 100px;
+}
+
+.switch-ios.switch-light strong {
+	flex-basis: 200px;
 }
 
 #save {
-	width: 40%;
+	width: 305px;
 	height: 40px;
 	margin-right: 10px;
 }
 
 #cancel {
-	width: 40%;
+	width: 305px;
 	background-color: gray;
 	border-color: #7477bf;
 	color: white;
@@ -350,7 +360,8 @@ a:link {
 		"header header"
 		"navigation main";
 	}
-}
+
+
 main {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr)
@@ -439,6 +450,16 @@ header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	text-align: left;
+}
+
+.members-bio {
+	display: flex;
+	align-items: center;
+}
+
+.members-text {
+	margin-left: 15px;
 }
 
 .members-date {
@@ -448,7 +469,11 @@ header {
 .recent-container {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	text-align: left;
+}
+
+.recent-text {
+	margin-left: 10px;
 }
 
 .profile-image {
@@ -464,13 +489,18 @@ header {
 	margin-left: 30px;
 }
 
-.recent-text {
-
-}
-
 /* settings */
 .settings-section {
-	grid-column: 1;
+	grid-column: 1/ span 2;
+}
+
+.switch-ios.switch-light span {
+	flex-basis: 100px;
+}
+
+.switch-ios.switch-light strong {
+	flex-basis: 200px;
+}
 }
 
 
