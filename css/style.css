@@ -23,6 +23,10 @@ textarea,
   "main";
 }
 
+main {
+	display: grid;
+}
+
 /* header */
 header {
   grid-area: header;
@@ -40,6 +44,12 @@ h1 {
 	width: auto;
 	padding-left: 10px;
 	font-size: 24px;
+}
+
+h3 {
+	height: auto;
+	width: auto;
+	font-size: 20px;
 }
 
 .bell {
@@ -111,6 +121,11 @@ main {
 .social-stats {
 	border-bottom: 1px solid lightgray;
 	padding-bottom: 15px;
+	padding-left: 15px;
+}
+
+#daily-chart {
+	padding-right: 10px;
 }
 
 .main-header {
@@ -149,6 +164,14 @@ main {
   position: absolute;
   top: 38.5%;
   right: 8%;
+}
+
+.traffic-nav li:first-child {
+    background-color: #78CF82;
+    color: white;
+    font-weight: 600;
+		padding: 6px;
+    border-radius: 0.5rem;
 }
 
 .traffic-header {
@@ -194,7 +217,13 @@ main {
 	border-radius: 50%;
 	width: 70px;
 	height: 70px;
-	padding: auto;
+	padding: 15px;
+	overflow: visible;
+ }
+
+ .social-header {
+	 padding-top: 25px;
+	 padding-bottom: 15px;
  }
 
 .title {
@@ -203,19 +232,16 @@ main {
 }
 
  .number {
-	 margin-left: 20px;
+	margin-left: 20px;
  	font-size: 36px;
  }
 
-/* members */
-
-.social-header,
-.members-section,
-.activity-header,
-.message-header,
-.setting-header {
-	margin: 20px;
-}
+ .members-section,
+ .activity-header,
+ .message-header,
+ .setting-header {
+ 	margin: 20px;
+ }
 
 .widget-container-half {
 	margin-top: 10px;
@@ -232,9 +258,14 @@ main {
 	padding-bottom: 20px;
 }
 
-.members-text,
+.members-bio,
 .recent-text {
 	padding-top: 5px;
+}
+
+.members-and-activities {
+	display: grid;
+	grid-template-columns: 1fr;
 }
 
 a:link {
@@ -281,7 +312,11 @@ a:link {
 
 .switch-light {
 	margin-bottom: 20px;
-	width: 100px;
+}
+
+.switch-ios.switch-light>span {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .form-field {
@@ -327,13 +362,24 @@ a:link {
 		"navigation main";
 }
 
-.main {
-  display: grid;
+main {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr)
+}
+
+.main-header,
+.alert-banner,
+.traffic,
+.social-stats,
+.members-section,
+.activity,
+.message
+.settings-section {
+	grid-column: 1/span2;
 }
 
 header {
 	display: flex;
-  padding: 10px;
 }
 
 .bell {
@@ -359,10 +405,12 @@ header {
 
 .daily {
 	grid-column: 1 / 2;
+	justify-self: stretch;
 }
 
 .mobile {
 	grid-column: 2 / 3;
+	justify-self: stretch;
 }
 
 .widget-container-full {
@@ -370,15 +418,11 @@ header {
 }
 
 .widget-container-half {
-	width: 45vw;
+	width: 50vw;
+
 }
 
 .alert-banner-close {
-  font-size: 18px;
-  font-weight: bold;
-  position: absolute;
-  top: 32%;
-  right: 2%;
 }
 
 /* Navigation*/
@@ -405,14 +449,23 @@ header {
 .member-container,
 .recent-container {
 	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
-.members,
 .profile-image {
 	width: 6rem;
 	height: 6rem;
+}
+
+.members-bio {
+	text-align: left;
+	padding-left: 15px;
+	padding-top: 25px;
+}
+
+.members-date {
+  align-self: center;
 }
 
 .messaging-settings {
@@ -423,14 +476,12 @@ header {
 	margin-left: 30px;
 }
 
-/*Buttons*/
-.form-field,
-.form-area  {
-	width: 700px;
+.recent-text {
+	text-align: left;
 }
 
-.button-primary {
-	width: 700px;
+.settings-section {
+	grid-column: 1;
 }
 
 #save,
@@ -438,7 +489,7 @@ header {
 	width: 340px;
 }
 
-@media screen and (min-width: 1024px) {
+/*@media screen and (min-width: 1024px) {
 
 .grid-container {
 	grid-template-columns: 80px 1fr;
@@ -462,6 +513,11 @@ header {
 
 .activity {
 	grid-column: 2;
+}
+
+.members-and-activities {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
 .form-field,
