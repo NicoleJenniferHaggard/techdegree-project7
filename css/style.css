@@ -25,6 +25,7 @@ textarea,
 
 main {
 	display: grid;
+	overflow: hidden;
 }
 
 /* header */
@@ -37,6 +38,7 @@ header {
 	justify-content: space-between;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	width: 100%;
 }
 
 h1 {
@@ -50,6 +52,7 @@ h3 {
 	height: auto;
 	width: auto;
 	font-size: 20px;
+	padding-bottom: 10px;
 }
 
 .bell {
@@ -77,8 +80,8 @@ h3 {
 
 .profile-image {
 	border-radius: 50%;
-	height: 35px;
-	width: 35px;
+	height: 50px;
+	width: 50px;
 }
 
 .name {
@@ -90,6 +93,7 @@ h3 {
 /* navigation */
 nav {
 	grid-area: navigation;
+	width: 100%;
 }
 
 .nav-icons {
@@ -110,22 +114,9 @@ nav {
 
 }
 
-/* main */
+/* header*/
 main {
   grid-area: main;
-}
-
-#traffic-chart,
-#daily-chart,
-#mobile-chart,
-.social-stats {
-	border-bottom: 1px solid lightgray;
-	padding-bottom: 15px;
-	padding-left: 15px;
-}
-
-#daily-chart {
-	padding-right: 10px;
 }
 
 .main-header {
@@ -151,8 +142,7 @@ main {
 
 .alert-banner {
 	display: flex;
-	padding: 10px;
-	margin: 8px;
+	margin: 10px;
 	background-color: #7477bf;
 	color: white;
 	border-radius: 5px;
@@ -162,8 +152,23 @@ main {
   font-size: 18px;
   font-weight: bold;
   position: absolute;
-  top: 38.5%;
+  top: 36%;
   right: 8%;
+}
+
+/* charts */
+#traffic-chart,
+#daily-chart,
+#mobile-chart,
+.social-stats {
+	border-bottom: 1px solid lightgray;
+}
+
+#daily-chart,
+#mobile-chart {
+	width: 45%;
+	height: 45%;
+	padding-right: 10px;
 }
 
 .traffic-nav li:first-child {
@@ -198,7 +203,7 @@ main {
 	margin-left: 15px;
 }
 
-/* socials */
+/* social */
 .social-container {
 	display: flex;
 	border: 2px solid darkgrey;
@@ -222,8 +227,7 @@ main {
  }
 
  .social-header {
-	 padding-top: 25px;
-	 padding-bottom: 15px;
+	 padding: 25px 0 15px 15px;
  }
 
 .title {
@@ -236,16 +240,13 @@ main {
  	font-size: 36px;
  }
 
+/* member and recent */
  .members-section,
  .activity-header,
  .message-header,
  .setting-header {
- 	margin: 20px;
+ 	margin: 10px 0 0 15px;
  }
-
-.widget-container-half {
-	margin-top: 10px;
-}
 
 .member-container,
 .recent-container {
@@ -272,13 +273,10 @@ a:link {
   text-decoration: none;
 }
 
-.widget-container {
-  display: flex;
-  flex-direction: column;
-}
-
+/* setting */
 .form-field,
 .form-area  {
+	width: 90%;
 	margin: 5px 30px 10px 30px;
 	background-color: #f4f0f0
 }
@@ -301,9 +299,9 @@ a:link {
 	color: white;
 	height: 40px;
 	border-radius: 0.5rem;
+	width: 90%;
 }
 
-/* settings */
 .settings {
 	display: flex;
 	flex-direction: column;
@@ -317,11 +315,6 @@ a:link {
 .switch-ios.switch-light>span {
 	display: inline-block;
 	vertical-align: middle;
-}
-
-.form-field {
-	padding-left: 10px;
-	width: 80%
 }
 
 #save {
@@ -340,16 +333,12 @@ a:link {
 	border-radius: 0.5rem;
 }
 
-/* charts */
-.widget-container {
-	width: 95vw;
-	padding-top: 10px;
+.timezone-dropdown {
+	margin-right: 20px;
 }
 
-#daily-chart,
-#mobile-chart {
-	width: 45vw;
-	height: 45vh;
+.widget-container {
+	width: 95%;
 }
 
 
@@ -360,8 +349,8 @@ a:link {
     grid-template-areas:
 		"header header"
 		"navigation main";
+	}
 }
-
 main {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr)
@@ -373,11 +362,12 @@ main {
 .social-stats,
 .members-section,
 .activity,
-.message
+.message,
 .settings-section {
-	grid-column: 1/span2;
+	grid-column: 1/span 2;
 }
 
+/* header */
 header {
 	display: flex;
 }
@@ -403,26 +393,25 @@ header {
 	padding-right: 40px;
 }
 
-.daily {
-	grid-column: 1 / 2;
-	justify-self: stretch;
-}
-
-.mobile {
-	grid-column: 2 / 3;
-	justify-self: stretch;
-}
-
-.widget-container-full {
-	width: 90vw;
-}
-
-.widget-container-half {
-	width: 50vw;
-
+/* main */
+.alert-banner {
+	width: 93%;
 }
 
 .alert-banner-close {
+  top: 33%;
+}
+
+/* charts */
+.traffic-nav {
+}
+
+.widget-container-full {
+	width: 95%;
+}
+
+.widget-container-half {
+	width: 40vw;
 }
 
 /* Navigation*/
@@ -446,16 +435,10 @@ header {
  }
 
 /*Memebers and recent*/
-.member-container,
-.recent-container {
+.member-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-}
-
-.profile-image {
-	width: 6rem;
-	height: 6rem;
 }
 
 .members-bio {
@@ -468,6 +451,17 @@ header {
   align-self: center;
 }
 
+.recent-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.profile-image {
+	width: 6rem;
+	height: 6rem;
+}
+
 .messaging-settings {
 	grid-column: 1;
 }
@@ -477,17 +471,16 @@ header {
 }
 
 .recent-text {
-	text-align: left;
+
 }
 
+/* settings */
 .settings-section {
 	grid-column: 1;
 }
 
-#save,
-#cancel {
-	width: 340px;
-}
+
+
 
 /*@media screen and (min-width: 1024px) {
 
