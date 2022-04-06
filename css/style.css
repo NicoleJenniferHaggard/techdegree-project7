@@ -441,12 +441,6 @@ header {
 	justify-content: space-between;
 }
 
-.members-bio {
-	text-align: left;
-	padding-left: 15px;
-	padding-top: 25px;
-}
-
 .members-date {
   align-self: center;
 }
