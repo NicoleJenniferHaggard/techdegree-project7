@@ -18,26 +18,6 @@ let hourlyData = {
   }]
 }
 
-//let dailyData1 = {
-//   labels: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
-//   datasets: [{
-//   data: [2500, 1350, 1400, 1200, 2500, 1750, 2450],
-//   }]
-// }
-//
-// let weeklyData = {
-//   labels: ["week 1", "week 2", "week 3", "week 4", "week 5", "week 6", "week 7", "week 8", "week 9"],
-//   datasets: [{
-//   data: [1500, 1700, 2000, 2500, 1400, 1650, 1020, 1500, 1250, 1450],
-//   }]
-// }
-//
-// let monthlyData = {
-//   labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-//   datasets: [{
-//   data: [1500, 1850, 1400, 2000, 1500, 1750, 1250, 3500, 5000, 2500, 1100, 1340],
-//   }]
-// }
 
 let trafficOptions = {
   backgroundColor: 'rgba(112, 104, 201, .5)',
@@ -65,6 +45,7 @@ let trafficChart = new Chart(trafficCanvas, {
 });
 
 const dailyCanvas = document.getElementById("daily-chart");
+
 
 //data for daily traffic bar chart
 const dailyData = {

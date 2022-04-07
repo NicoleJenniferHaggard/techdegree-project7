@@ -162,7 +162,6 @@ main {
 #mobile-chart {
 	width: 45%;
 	height: 45%;
-	padding-right: 10px;
 }
 
 .traffic-nav li:first-child {
@@ -189,12 +188,12 @@ main {
 
 .daily {
 	padding-top: 20px;
-	margin-left: 15px;
+	padding-left: 15px;
 }
 
 .mobile {
 	padding-top: 20px;
-	margin-left: 15px;
+	padding-left: 15px;
 }
 
 /* social */
@@ -235,20 +234,13 @@ main {
  }
 
 /* member and recent */
- .members-section,
- .activity-header,
- .message-header,
- .setting-header {
- 	margin: 10px 0 0 15px;
- }
-
 .member-container,
 .recent-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 30px 10px 10px 10px;
+  padding: 30px 10px 10px 10px;
 	border-bottom: 1px solid lightgray;
 	padding-bottom: 20px;
 }
@@ -265,6 +257,13 @@ main {
 
 a:link {
   text-decoration: none;
+}
+
+.members h3,
+.activity h3,
+.message h3,
+.setting-header h3 {
+	padding: 10px 0 5px 10px;
 }
 
 /* setting */
@@ -496,7 +495,7 @@ header {
 }
 
 .members-text {
-	margin-left: 15px;
+	padding-left: 15px;
 }
 
 .members-date {
@@ -523,7 +522,7 @@ header {
 }
 
 .recent-container {
-	margin-left: 30px;
+	padding-left: 30px;
 }
 
 /* settings */
