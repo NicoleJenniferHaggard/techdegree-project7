@@ -554,8 +554,11 @@ header {
 		grid-template-rows: auto;
 		grid-template-areas:
 		"header header"
-		"navigation-main";
+		"navigation main"
+		"memebers message"
+		"activity settings"
 }
+
 
 header {
 	display: flex;
@@ -584,6 +587,17 @@ header {
 .social-container {
 	width: 450px;
 }
+
+/*
+.members,
+.message {
+	grid-column: 1 / span 1;
+}
+
+.activity,
+.settings-section {
+	grid-column: 2 / span 1;
+}*/
 
 .form-field,
 .form-area,
