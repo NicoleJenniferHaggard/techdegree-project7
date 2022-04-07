@@ -415,6 +415,14 @@ header {
 
 /* charts */
 .traffic-nav {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.traffic-nav li {
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-right: 10px;
 }
 
 .widget-container-full {
@@ -423,6 +431,23 @@ header {
 
 .widget-container-half {
 	width: 40vw;
+	padding-top: 5px;
+}
+
+#traffic-chart,
+.social-stats {
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 15px;
+}
+
+#daily-chart {
+	border-bottom: 1px solid lightgray;
+	padding-bottom:15px;
+}
+
+#mobile-chart {
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 15px;
 }
 
 /* Navigation*/
@@ -504,37 +529,38 @@ header {
 }
 
 
-
-
-/*@media screen and (min-width: 1024px) {
-
-.grid-container {
-	grid-template-columns: 80px 1fr;
-	grid-template-rows: auto;
-	grid-template-areas:
-	"header header"
-	"navigation-main";
+@media screen and (min-width: 1024px) {
+	.grid-container {
+		grid-template-columns: 80px 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+		"header header"
+		"navigation-main";
 }
 
-.daily {
-	grid-column: 1 / 2;
+header {
+	display: flex;
+	justify-content: space-evenly;
 }
 
-.mobile {
-	grid-column: 2 / 3;
+.bell {
+  margin-left: 600px;
 }
 
-.members-section {
-	grid-column: 1;
+.profile-image {
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+
 }
 
-.activity {
-	grid-column: 2;
+.name {
+	padding-right: 40px;
+	text-align: center;
 }
 
-.members-and-activities {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+.social-container {
+	width: 450px;
 }
 
 .form-field,
@@ -546,4 +572,5 @@ header {
 #save,
 #cancel {
 	width: 445px;
+}
 }
