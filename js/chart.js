@@ -18,7 +18,7 @@ let hourlyData = {
   }]
 }
 
-// let dailyData1 = {
+//let dailyData1 = {
 //   labels: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
 //   datasets: [{
 //   data: [2500, 1350, 1400, 1200, 2500, 1750, 2450],
