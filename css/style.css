@@ -242,7 +242,6 @@ main {
   text-align: center;
   padding: 30px 10px 10px 10px;
 	border-bottom: 1px solid lightgray;
-	padding-bottom: 20px;
 }
 
 .members-bio,
@@ -358,7 +357,6 @@ a:link {
 		"header header"
 		"navigation main";
 	}
-
 
 main {
 	display: grid;
@@ -487,6 +485,7 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 	text-align: left;
+	padding: 30px 10px 10px 20px;
 }
 
 .members-bio {
@@ -548,16 +547,17 @@ header {
 }
 
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
 	.grid-container {
 		grid-template-columns: 80px 1fr;
 		grid-template-rows: auto;
 		grid-template-areas:
 		"header header"
 		"navigation main"
-		"memebers message"
-		"activity settings"
+		".memebers .message"
+		".activity .settings"
 }
+
 
 
 header {
@@ -588,25 +588,52 @@ header {
 	width: 90%;
 }
 
-
-.members,
+.members-section,
 .message {
-	grid-column: 1 / span 1;
+	grid-column: 1/ span 1;
 }
 
 .activity,
 .settings-section {
-	grid-column: 2 / span 1;
+	grid-column: 2/ span 1;
 }
 
-.form-field,
-.form-area,
-.button-primary {
-
+.members-section {
+	border-right: 1px solid lightgray;
 }
 
+.member-container {
+	padding: 20px 20px 20px 20px;
+	margin: 8px;
+}
+
+.recent-container {
+  padding-bottom: 9px;
+	margin: 8px;
+}
+
+.members-bio,
+.recent-text {
+	padding-top: 5px;
+}
+
+.message {
+	border-right: 1px solid lightgray;
+}
+
+.message h3 {
+	margin-bottom: 8px;
+}
+
+.form-field {
+	margin-top: 2px;
+}
+
+.form-area {
+	height: 105px;
+}
 #save,
 #cancel {
-
+	width: 42%;
 }
 }
