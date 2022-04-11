@@ -56,7 +56,7 @@ h3 {
 
 .bell {
 	height: auto;
-	width: 40px
+	width: 30px
 }
 
 .bell:hover {
@@ -122,7 +122,6 @@ nav {
 
 .navigation {
 	background-color: #484672;
-
 }
 
 /* header*/
@@ -153,13 +152,14 @@ main {
 
 .alert-banner {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-content: center;
 	margin: 10px;
 	background-color: #7477bf;
 	color: white;
 	border-radius: 5px;
 	width: 300px;
+	padding: 1rem;
 }
 
 
@@ -258,11 +258,6 @@ main {
 	border-bottom: 1px solid lightgray;
 }
 
-.members-bio,
-.recent-text {
-	padding-top: 5px;
-}
-
 .members-and-activities {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -277,6 +272,10 @@ a:link {
 .message h3,
 .setting-header h3 {
 	padding: 10px 0 5px 10px;
+}
+
+.bottom-p {
+	display: none;
 }
 
 /* setting */
@@ -422,9 +421,10 @@ header {
 /* main */
 .alert-banner {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-content: center;
 	width: auto;
+	padding: 1rem;
 }
 
 /* charts */
@@ -498,43 +498,22 @@ header {
  }
 
 /*Memebers and recent*/
-.member-container {
+.member-container, .recent-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	flex-wrap: nowrap;
+	padding: 20px 10px 10px 10px;
 	text-align: left;
-	padding: 30px 10px 10px 20px;
 }
 
-.members-bio {
-	display: flex;
-	align-items: center;
-	padding-left: 5px;
-}
-
-.members-text {
-	padding-left: 15px;
-}
-
-.members-date {
-  align-self: center;
-}
-
-.recent-bio {
+.members-bio, .recent-bio {
 	display: flex;
 	align-items: center;
 }
 
-.recent-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	text-align: left;
-	padding: 30px 10px 10px 20px;
-}
-
-.recent-text {
-	padding-left: 15px;
+.members-text, .recent-text {
+	margin-left: 1rem;
 }
 
 .bottom-p {
@@ -552,6 +531,10 @@ header {
 
 .recent-container {
 	padding-left: 30px;
+}
+
+.bottom-p {
+	display: block;
 }
 
 /* settings */
