@@ -56,7 +56,7 @@ h3 {
 
 .bell {
 	height: auto;
-	width: 30px
+	width: 25px
 }
 
 .bell:hover {
@@ -70,8 +70,8 @@ h3 {
 	align-items: center;
 	 border-left: 2px solid lightgray;
 	 padding-left: 1rem;
-	 padding-right: 1rem;
-	 height: 55%;
+	 padding-right: .5rem;
+	 height: 80%;
 }
 
 .profile-image {
@@ -83,7 +83,7 @@ h3 {
 .name {
 	height: auto;
 	width: auto;
-	padding: 0 1rem;
+	padding: 0 .5rem;
 }
 
 .bell-container {
@@ -203,6 +203,7 @@ main {
 .daily {
 	padding-top: 20px;
 	padding-left: 15px;
+	padding-right: 10px;
 }
 
 .mobile {
@@ -397,25 +398,24 @@ header {
 	display: flex;
 }
 
-.bell {
-	display: flex;
-  height: 30px;
-	width: 30px;
-  margin-left: 350px;
+h1 {
+	font-size: 30px;
 }
 
-.profile {
-	padding-right: 5px;
+.bell {
+	display: flex;
+  height: 40px;
+	width: 40px;
+  margin-left: 330px;
 }
 
 .profile-image {
-	height: 45px;
-	width: 45px;
-	border-radius: 50%;
+	width: 30px;
+	height: 30px;
 }
 
 .name {
-	padding-right: 40px;
+	padding-right: 15px;
 }
 
 /* main */
@@ -446,8 +446,12 @@ header {
 	padding-bottom: 10px;
 }
 
+.traffic {
+	padding-right: 20px;
+}
+
 .widget-container-full {
-	width: 95%;
+	width: 100%;
 }
 
 .widget-container-half {
@@ -498,7 +502,8 @@ header {
  }
 
 /*Memebers and recent*/
-.member-container, .recent-container {
+.member-container,
+.recent-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -507,12 +512,14 @@ header {
 	text-align: left;
 }
 
-.members-bio, .recent-bio {
+.members-bio,
+.recent-bio {
 	display: flex;
 	align-items: center;
 }
 
-.members-text, .recent-text {
+.members-text,
+.recent-text {
 	margin-left: 1rem;
 }
 
@@ -591,6 +598,10 @@ header {
 	text-align: center;
 }
 
+.traffic {
+	padding-right: 20px;
+}
+
 .social-container {
 	width: 90%;
 }
@@ -607,6 +618,10 @@ header {
 
 .members-section {
 	border-right: 1px solid lightgray;
+}
+
+.members-bio {
+	padding: 1px;
 }
 
 .member-and-activity {
