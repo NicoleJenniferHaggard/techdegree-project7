@@ -205,9 +205,18 @@ main {
 	padding-right: 10px;
 }
 
+.daily h3 {
+	padding-bottom: 8px;
+}
+
 .mobile {
 	padding-top: 20px;
 	padding-left: 15px;
+	padding-right: 10px;
+}
+
+.mobile h3 {
+	padding-bottom: 8px;
 }
 
 /* social */
@@ -376,6 +385,7 @@ a:link {
 	}
 
 main {
+	max-width: 100%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr)
 }
