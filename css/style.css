@@ -25,7 +25,7 @@ textarea,
 
 main {
 	display: grid;
-	overflow: hidden;
+  max-width: 100%;
 }
 
 /* header */
