@@ -116,9 +116,8 @@ const message = document.getElementById("messageField");
 const send = document.getElementById("send");
 
 send.addEventListener("click", e => {
-
+e.preventDefault();
     if(user.value === "" && message.value === "") {
-        e.preventDefult();
         alert("Please fill out user and message fields before sending");
     } else if (user.value === "") {
         alert("Please fill out user field before sending");
